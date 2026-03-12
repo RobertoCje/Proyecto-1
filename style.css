@@ -1,0 +1,456 @@
+body{
+    background-color: #ffffff;
+    color: #000;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    /* ... (Manten tus estilos anteriores de fuente y reset aquí si los tienes) ... */
+    
+    /* Configuración de la imagen de fondo */
+    background-image: url('../imagenes/fondo.jpg'); /* Pon aquí el nombre correcto de tu archivo de imagen */
+    background-size: cover; /* Asegura que la imagen cubra toda la pantalla sin deformarse */
+    background-position: center center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Hace que el fondo se quede quieto al hacer scroll (da un efecto moderno) */
+    
+    /* Efecto para oscurecer el fondo y asegurar legibilidad */
+    /* Este es el truco clave: superponemos un color oscuro con transparencia */
+    background-color: rgba(0, 0, 0, 0.7); /* El valor 0.7 es la opacidad (entre 0 y 1). Cámbialo si quieres más oscuro o más claro */
+    background-blend-mode: darken; /* Mezcla el color de fondo oscuro con la imagen */
+
+    /* Importante: para que el texto resalte sobre el fondo oscuro, cámbialo a blanco */
+    color: #ffffff;
+    position: relative; /* Necesario para que z-index funcione */
+    z-index: 10;        /* Un número alto asegura que esté "encima" */
+}
+.main-header{
+    background-color: rgba(162, 194, 216, 0.8); /* Azul claro con 80% de opacidad */
+    backdrop-filter: blur(5px); /* Efecto de desenfoque muy elegante */
+    padding: 10px 0;
+    text-align: center;
+}
+.logo-container{
+    max-width: 450px; /* Tamaño un poco más discreto */
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco suavizado */
+    padding: 10px;
+    border-radius: 8px;
+    mix-blend-mode: multiply; /* Intenta mezclar el blanco con el azul de fondo */
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    background-color: #ff9900;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+
+}
+nav{
+    background-color: #bed8e4;
+    padding: 1rem;
+    position: sticky; 
+    top: 0;
+    
+}
+.gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    /* Gradiente que simula un reflejo de luz */
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
+    animation: gradientAnimation 4s ease-in-out infinite;
+    z-index: 1;
+}
+
+@keyframes gradientAnimation {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 2; /* Para estar arriba del degradado */
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    background-color: rgba(0,0,0,0.1);
+}
+
+/* Contenedor centralizado para el contenido */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    padding: 40px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Sombra para profundidad */
+    border-radius: 8px;
+}
+
+h1, h2 {
+    color: #004a99;
+}
+/* Quitar subrayado y mejorar enlaces */
+.nav-links li a {
+    text-decoration: none; /* Quita la línea azul */
+    color: white;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    display: inline-block;
+    transition: transform 0.2s; /* Pequeño efecto al pasar el mouse */
+}
+
+.nav-links li a:hover {
+    transform: scale(1.1); /* Se agranda un poquito al poner el mouse */
+    color: #004a99;
+}
+
+/* Ajuste del logo para que no sea tan invasivo */
+.logo-container img {
+    max-width: 450px; /* Reducimos un poco el tamaño */
+    height: auto;
+    border-radius: 4px;
+}
+.navbar {
+    /* ... tus otras propiedades ... */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.30); /* Esto crea la sombra hacia abajo */
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05); /* Un borde casi invisible para definir el final */
+}
+.productos-grid {
+    display: grid;
+    /* Crea 3 columnas iguales. Si la pantalla es pequeña, se ajustan solas */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px; /* Espacio entre las tarjetas */
+    margin-top: 20px;
+}
+
+/* Estilo de cada Tarjeta */
+.producto-card {
+   background: rgba(255, 255, 255, 0.95); /* Fondo blanco casi sólido para legibilidad */
+    border-radius: 12px; /* Bordes redondeados y suaves */
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5); /* Sombra oscura y difuminada para "elevar" la tarjeta */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación suave */
+    border: none; /* Eliminamos bordes innecesarios */
+    color: #333; /* Forzamos texto oscuro dentro de la tarjeta */
+}
+
+.producto-card:hover .producto-imagen img{
+ transform: scale(1.1); /* La foto se agranda un poquito dentro de su cuadro */
+}
+
+/* Área de la imagen */
+.producto-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen al contenedor sin estirarla */
+    transition: transform 0.5s ease; /* Para un efecto de zoom */
+   
+}
+.producto-imagen {
+    height: 200px;
+    overflow: hidden; /* Corta lo que sobre de la imagen al hacer zoom */
+    background-color: #f0f0f0;
+}
+/* Información del producto */
+.producto-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.producto-info h3 {
+    color: #004a99;
+    margin-top:0; 
+}
+
+.producto-info p {
+    color: #555;
+}
+
+/* Botón de detalles */
+.btn-ver-mas{
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    background-color: #ff9800;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background 0.3s;
+}
+
+.btn-detalles:hover {
+    background-color: #e68a00;
+}
+#Contacto {
+    margin-top: 50px;
+    padding-bottom: 20px;
+}
+.contacto-wrapper {
+  background: rgba(255, 255, 255, 0.9); /* Efecto "cristalizado" (semi-transparente) */
+    padding: 40px;
+    border-radius: 15px; /* Bordes un poco más redondeados */
+    color: #333; /* Texto oscuro para contraste */
+    backdrop-filter: blur(10px); /* Desenfoca el fondo industrial detrás de la tarjeta */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Sombra para dar profundidad */
+}
+
+.contacto-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacio entre cada campo */
+    margin-top: 30px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.input-group label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #004a99; /* Azul de la marca */
+}
+
+.input-group input, 
+.input-group textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Efecto cuando el usuario hace clic en un campo */
+.input-group input:focus, 
+.input-group textarea:focus {
+    outline: none;
+    border-color: #ff9800; /* Naranja de la marca */
+    box-shadow: 0 0 5px rgba(255, 152, 0, 0.3);
+}
+
+/* Botón de envío */
+.btn-enviar {
+    background-color: #004a99;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-enviar:hover {
+    background-color: #003366;
+    transform: translateY(-2px);
+}
+.cards-container {
+  display: flex;       /* Alinea las tarjetas en una fila */
+  overflow-x: auto;    /* Permite el scroll horizontal si exceden el ancho */
+  gap: 20px;           /* Espacio entre tarjetas */
+  padding: 20px;       /* Espacio para que las sombras no se corten */
+  scroll-behavior: smooth; /* Hace que el deslizamiento sea suave */
+  
+  /* Opcional: Ocultar la barra de scroll estética en algunos navegadores */
+  scrollbar-width: none; /* Firefox */
+}
+
+.cards-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari y Opera */
+}
+
+.card {
+  min-width: 300px;    /* Ajusta este ancho según el tamaño de tus tarjetas */
+  flex-shrink: 0;      /* Evita que las tarjetas se "aplasten" */
+}
+.cards-container {
+  scroll-snap-type: x mandatory;
+}
+
+.card {
+  scroll-snap-align: start; /* O 'center' si prefieres que se alineen al medio */
+}
+/* Sobreescribir grid para scroll lateral */
+.productos-grid {
+    display: flex !important; 
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory;
+}
+
+.producto-card {
+    flex: 0 0 300px; /* Esto obliga a las tarjetas a medir 300px y no encogerse */
+    scroll-snap-align: start;
+}
+
+/* --- TABLETS (Pantallas menores a 768px) --- */
+@media (max-width: 768px) {
+    .carousel-container {
+        padding: 0 10px;
+    }
+
+    /* Ocultamos las flechas en tablets/móviles porque es más natural usar el dedo */
+    .nav-btn {
+        display: none;
+    }
+
+    .nosotros-content {
+        flex-direction: column; /* Si tienes imagen y texto de lado a lado, se pondrán uno bajo el otro */
+        text-align: center;
+    }
+}
+
+/* --- MÓVILES (Pantallas menores a 480px) --- */
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Reducimos el tamaño del título principal */
+    }
+
+    .producto-card {
+        flex: 0 0 260px; /* Tarjetas un poco más pequeñas para que quepan mejor */
+    }
+
+    .productos-grid {
+        gap: 15px;
+    }
+}
+@media (max-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-wrap: wrap; /* Permite que los botones del menú bajen si no caben */
+        justify-content: center;
+        gap: 10px;
+        padding: 0;
+    }
+    
+    nav ul li a {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
+/* --- Estilos base del botón (oculto en PC) --- */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background-color: white; /* O el color de tu logo */
+    transition: 0.3s;
+}
+
+/* --- Media Query para Móviles --- */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex; /* Aparece el botón */
+    }
+
+    .nav-links {
+        display: none; /* Ocultamos el menú normal */
+        position: absolute;
+        top: 60px; /* Ajusta según la altura de tu navbar */
+        right: 0;
+        background-color: #333; /* Color oscuro como tu marca */
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        z-index: 1000;
+    }
+
+    /* Clase que activaremos con JavaScript */
+    .nav-links.active {
+        display: flex;
+    }
+}
+@media (max-width: 768px) {
+    /* El contenedor del formulario ahora usará todo el ancho */
+    .contacto-container {
+        width: 100%;
+        padding: 15px;
+        box-shadow: none; /* Opcional: quitar sombra en móvil para un look más plano */
+    }
+
+    /* Hacemos que cada campo (input y textarea) ocupe el 100% */
+    .contacto-form input, 
+    .contacto-form textarea,
+    .contacto-form select {
+        width: 100%;
+        margin-bottom: 15px;
+        font-size: 16px; /* Evita que iOS haga zoom automático al clickear */
+        padding: 12px;  /* Un poco más de espacio para los dedos */
+    }
+
+    /* Ajustamos el botón de enviar para que sea más fácil de tocar */
+    .btn-enviar {
+        width: 100%;
+        padding: 15px;
+        font-size: 18px;
+    }
+}
+.mobile-call-btn {
+    display: none; /* Oculto en PC */
+}
+
+@media (max-width: 768px) {
+    .mobile-call-btn {
+        display: block;
+        background-color: #25d366; /* Verde WhatsApp o el naranja de tu marca */
+        color: white;
+        text-align: center;
+        padding: 15px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+}
+.map-container {
+    width: 100%;
+    max-width: 1000px; /* Ancho máximo para que no se vea gigante en PC */
+    margin: 20px auto;
+    border-radius: 12px;
+    overflow: hidden; /* Para que las esquinas redondeadas funcionen */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Ajuste para móviles */
+@media (max-width: 768px) {
+    .map-container iframe {
+        height: 300px; /* Mapa más pequeño en celulares */
+    }
+}

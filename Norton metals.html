@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang = "es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">"
+    <title>Norton Metals</title>
+    <link rel="stylesheet" href="style.css">    
+</head>
+<body>
+    
+    <header class="main-header">
+        <div class="logo-container">
+        <img src="../imagenes/Norton-metal.JPG" alt="logo" width="600">
+        <div class="language-picker">
+            <select id="lang-select" 
+            onchange="changeLanguage(this.value)">
+        <option value="es" selected>Español 🇪🇸</option>
+        <option value="en">English 🇺🇸</option>
+    </select>
+    </div>
+        </div>
+        <nav class="navbar">
+            <div class="gradient-overlay"></div>
+          <ul class="nav-links"> 
+             <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+        </button>
+            <li><a href="#Inicio" data-key="inicio">Inicio</a></li>
+            <li><a href="#Nosotros" data-key="nosotros">Nosotros</a></li>
+            <li><a href="#Productos" data-key="productos">Productos</a></li>
+            <li><a href="#Contacto" data-key="contacto">Contacto</a></li>
+          </ul>      
+        </nav>
+        <nav class="navbar"> 
+       </header>
+
+    <main class="container">
+        <section id="Inicio">
+            <h2 data-key="inicio" class="titulo_seccion"><strong>Inicio</strong></h2>
+            <p data-key="texto_bienvenido" style="color: #000"><strong>Norton Metals actualmente presta servicios a los mercados de 
+             Texas, Oklahoma, Luisiana y Arkansas. Norton Metals se inició en la industria siderúrgica en 1952
+             y es un importante proveedor de acero consolidado en el área de Dallas-Fort Worth. 
+             El 28 de noviembre de 2008, JMS Russel Metals Corp. adquirió Norton Metals. El nombre legal 
+             de esta unidad operativa es Norton Metals, una división de JMS Russel Metals Corp.
+            </p></strong>
+
+        </section>
+
+        <hr>
+
+        <section id="Nosotros">
+            <h2 data-key="titulo_nosotros"><strong>Nosotros</strong></h2>
+            <p data-key="desc_nosotros" style="color: #000;">Nos comprometemos a brindar a nuestros clientes el más alto 
+                nivel de servicio y calidad en cada pedido. Nuestros empleados se dedican a garantizar que sus necesidades se cumplan a diario.</p>
+
+        </section>
+        <section id="Productos">
+                <h2 data-key="titulo_productos"style="color: #ffffff;">Nuestros Productos</h2>
+    <div class="productos-grid">
+        <article class="producto-card">
+    <div class="producto-imagen">
+        <img src="../imagenes/acero-estructural.jpeg" alt="Acero Estructural">
+    </div>
+    <div class="producto-info">
+        <h3 data-key="prod_beam" >Acero Estructural</h3>
+        <p data-key="desc_beam">Vigas y perfiles de alta resistencia para construcción industrial.</p>
+        <a href="detalles.html?id=acero_estructural" class="btn-ver-mas" data-key="ver_mas">Ver detalles </a>
+    </div>
+        </article>
+
+        <article class="producto-card">
+            <div class="producto-imagen">
+                <img src="../imagenes/rectangulo.jpeg" alt="Acero Estructural">
+                <div class="producto-info">
+            <h3 data-key="prod_beam">Acero Estructural</h3>
+         <p data-key="desc_beam">Vigas y perfiles de alta resistencia.</p>
+         <a href="detalles.html?id=beam" class="btn-ver-mas" data-key="ver_mas">Ver detalles</a>
+    </div>
+            </div>
+            <div class="producto-info">
+                <h3 data-key="prod_cuadrado">Cuadrado y Rectangulo</h3>
+                <p data-key="desc_cuadrado">Protección superior contra la corrosión para techos y fachadas.</p>
+                <a href="detalles.html?id=cuadrado" class="btn-ver-mas" data-key="ver_mas">Ver detalles </a>
+            </div>
+        </article>
+
+        <article class="producto-card">
+            <div class="producto-imagen">
+                  <img src="../imagenes/plato.jpeg" alt="Placas de Aleacion">
+            </div>
+            <div class="producto-info">
+                <h3 data-key="prod_placa">Placas de Aleación</h3>
+                <p data-key="desc_placa">Cortes a medida con precisión láser para proyectos especializados.</p>
+                <a href="detalles.html?id=placa-aleacion" class="btn-ver-mas" data-key="ver_mas">Ver detalles</a
+                </div>   
+         </article>
+
+        <article class="producto-card">
+            <div class="producto-imagen">
+                <img src="../imagenes/tubo.jpeg" alt="Tubo">
+            </div>
+            <div class="producto-info">
+                <h3 data-key="tubo">Tubos</h3>
+                <p data-key="desc_tubo">Rendimiento y fiabilidad en cada tramo. Este tubo de acero combina una estética 
+                    limpia con una integridad estructural inigualable.</p>
+                <a href="detalles.html?id=tubo" class="btn-ver-mas" data-key="ver_mas">Ver detalles</a>                       
+            </div>
+        </article>
+        
+        <article class="producto-card">
+            <div class="producto-imagen">
+                <img src="../imagenes/c-channel.jpeg" alt="C-Channel">
+            </div>
+            <div class="producto-info">
+                <h3 data-key="c_channel">Perfil C de Acero</h3>
+                <p data-key="desc_cchannel">El C-Channel es un componente esencial en la construcción estructural y mecánica.</p>
+                <a href="detalles.html?id=c-channel" class="btn-ver-mas" data-key="ver_mas">Ver detalles</a>
+            </div>
+        </article>
+        
+        <article class="producto-card">
+            <div class="producto-imagen">
+                <img src="../imagenes/varilla.jpeg" alt="varilla">
+            </div>
+            <div class="producto-info">
+                <h3 data-key="varilla">Varilla Corrugada</h3>
+                <p data-key="desc_varilla">Acero de refuerzo con superficie corrugada para máxima adherencia al concreto. Esencial en vigas, columnas y cimentaciones de alta resistencia.</p>
+                <a href="detalles.html?id=varilla" class="btn-ver-mas" data-key="ver_mas">Ver detalles</a>
+            </div>
+        </article>
+        </div>
+    </div>
+</div>
+
+</div>
+    </div>
+        </section>
+        <section id="Contacto">
+            <div class="contacto-wrapper">
+        <h2 data-key="contacto">Informacion de Contacto</h2>
+        <p data-key="info_contacto">¿Tienes alguna duda o requieres una cotización? Escríbenos.</p>
+
+        <form action="#" method="POST" class="contacto-form">
+            <div class="input-group">
+                <label for="nombre" data-key="nombre">Nombre Completo</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej. John Smith" required>
+            </div>
+
+            <div class="input-group">
+                <label for="email" data-key="email">Correo Electrónico</label>
+                <input type="email" id="email" name="email" placeholder="email@example.com" required>
+            </div>
+
+            <div class="input-group">
+                <label for="asunto" data-key="asunto">Asunto</label>
+                <input type="text" id="asunto" name="asunto" placeholder="Cotización, Consulta, etc.">
+            </div>
+
+            <div class="input-group">
+                <label for="mensaje" data-key="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+            </div>
+
+            <button type="submit" data-key="enviar_mensaje" class="btn-enviar">
+                Enviar Mensaje
+            </button>
+        </form>
+    </div>
+    <a href="tel:+1 817-232-0404" class="mobile-call-btn">
+   📞 Llamar ahora
+    </a>     
+        </section>
+        <section class="ubicacion" data-key="ubicacion">
+            <h2 data-key="ubicacion">Nuestra ubicacion</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13407.700243604768!2d-97.33920378805237!3d32.84723579843421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864e760c22a36fdf%3A0xdddeb9b8681d1096!2sNorton%20Metals!5e0!3m2!1ses!2smx!4v1773084881680!5m2!1ses!2smx"
+                        width="100%" height="450" style="border: 0;"
+                        allowfullscreen="" loading="lazy">
+                    </iframe>
+                    </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+   <script>
+    const translations = {
+    es: {
+        inicio: "Inicio",
+        nosotros: "Nosotros",
+        productos: "Productos",
+        contacto: "Contacto",
+        texto_bienvenido: `Norton Metals actualmente presta servicios a los mercados de Texas, Oklahoma, Luisiana y Arkansas. 
+                        Norton Metals se inició en la industria siderúrgica en 1952 y es un importante proveedor de acero 
+                        consolidado en el área de Dallas-Fort Worth. El 28 de noviembre de 2008, JMS Russel Metals Corp. 
+                        adquirió Norton Metals. El nombre legal de esta unidad operativa es Norton Metals,
+                        una división de JMS Russel Metals Corp.`,
+        titulo_nosotros: "Nosotros",
+        desc_nosotros: `Nos comprometemos a brindar a nuestros clientes el más alto nivel de servicio y calidad en cada 
+                        pedido. Nuestros empleados se dedican a garantizar que sus necesidades se cumplan a diario.`,
+        titulo_productos: "Nuestros Productos",
+        prod_metal: "Metales Industriales",
+        prod_acero: "Acero Inoxidable",
+        prod_beam: "Acero Estructural",
+        desc_beam: "Vigas y perfiles de alta resistencia para construcción industrial.",
+        prod_cuadrado: "Cuadrado y Rectangulo",
+        desc_cuadrado: "Protección superior contra la corrosión para techos y fachadas.",
+        prod_placa: "Placa de Aleacion",
+        desc_placa: "Cortes a medida con precisión láser para proyectos especializados.",
+        ver_mas: "Ver más",
+        info_contacto: "¿Tienes alguna duda o requieres una cotización? Escríbenos.",
+        nombre: "Nombre Completo.",
+        email: "Correo Electronico.",
+        mensaje: "Mensaje.",
+        asunto: "Asunto.",
+        ubicacion:"Nuestra Ubicacion.",
+        enviar_mensaje: "Enviar mensaje",
+        tubo:"Tubo",
+        desc_tubo:"Rendimiento y fiabilidad en cada tramo. Este tubo de acero combina una estética limpia con una integridad estructural inigualable.",
+        c_channel:"Perfil C de Acero",
+        desc_cchanel: "El C-Channel es un componente esencial en la construcción estructural y mecánica.",
+        varilla: "Varilla Corrugada.",
+        desc_varilla: "Acero de refuerzo con superficie corrugada para máxima adherencia al concreto. Esencial en vigas, columnas y cimentaciones de alta resistencia.",
+    },
+    en: {
+        inicio: "Home",
+        nosotros: "About Us",
+        productos: "Products",
+        contacto: "Contact",
+        texto_bienvenido:  `Norton Metals currently services the Texas, Oklahoma, Louisiana and Arkansas markets. 
+                            Norton Metals began in the steel industry in 1952 and is an established major steel 
+                            supplier in the Dallas-Fort Worth area. On November 28, 2008 JMS Russel Metals Corp. 
+                            acquired Norton Metals. The legal name for this operating unit is Norton Metals, 
+                            a division of JMS Russel Metals Corp.`,
+        titulo_nosotros: "About Us",
+        desc_nosotros:  `We are committed to providing our customers with the highest level of service and quality 
+                        on every order.   Our employees are dedicated to ensuring that your requirements are met each and every day.`,
+        titulo_productos: "Our Products",
+        prod_metal: "Industrial Metals.",
+        prod_acero: "Stainless Steel",
+        prod_beam: "Structural steel",
+        desc_beam: "High-resistance beams and profiles for industrial construction.",
+        prod_cuadrado: "Square and Rectangle",
+        desc_cuadrado: "Superior corrosion protection for roofs and facades.",
+        prod_placa: "Alloy Plates",
+        desc_placa: "Custom laser-cut precision for specialized projects.",
+        ver_mas: "See more",
+        contacto: "Contact Details.",
+        info_contacto: "Do you have any questions or need an estimate? Write to us.",
+        nombre: "Name",
+        email: "email",
+        mensaje: "Message",
+        asunto: "Issue",
+        enviar_mensaje: "Send Message",
+        tubo: "Steel Pipe",
+        desc_tubo: "Performance and reliability in every section. This steel tube combines a clean aesthetic with unmatched structural integrity.",
+        c_channel: "C Channel",
+        desc_cchannel: "The C-Channel is an essential component in structural and mechanical construction.",
+        varilla: "Rebar.",
+        desc_varilla: "Reinforcing steel with a corrugated surface for maximum adhesion to concrete. Essential in high-strength beams, columns, and foundations.",
+    }
+};
+function changeLanguage(lang) {
+    console.log("Cambiando a:", lang); // Verificación en consola
+    const elements = document.querySelectorAll('[data-key]');
+    
+    console.log("Elementos encontrados:", elements.length); // Esto debe ser mayor a 0
+
+    elements.forEach(element => {
+        const key = element.getAttribute('data-key').trim();
+        if (translations[lang] && translations[lang][key]) {
+            element.innerHTML = translations[lang][key];
+        }
+    });
+    
+    document.documentElement.lang = lang;
+}
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    
+    // Opcional: Animación de las rayitas (forma una X)
+    hamburger.classList.toggle('open');
+});
+</script>
+</body>
+</html>
