@@ -8,7 +8,7 @@ body{
     /* ... (Manten tus estilos anteriores de fuente y reset aquí si los tienes) ... */
     
     /* Configuración de la imagen de fondo */
-    background-image: url('../imagenes/fondo.jpg'); /* Pon aquí el nombre correcto de tu archivo de imagen */
+    background-image: url('img/fondo.jpg'); /* Pon aquí el nombre correcto de tu archivo de imagen */
     background-size: cover; /* Asegura que la imagen cubra toda la pantalla sin deformarse */
     background-position: center center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita que la imagen se repita */

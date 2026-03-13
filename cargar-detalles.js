@@ -2,7 +2,7 @@
     'acero_estructural': {
         titulo: 'Acero Estructural',
         descripcion: 'Componente esencial para construcción estructural...',
-        imagen: '../imagenes/beam1.jpeg',
+        imagen: 'img/beam1.jpeg',
         tabla:[
             ['3/8"', '0.560', '12.0', 'Disponible'],
             ['3/8"', '0.560', '12.0', 'Disponible'],
@@ -11,7 +11,7 @@
     'cuadrado': {
         titulo: 'Cuadrado y Rectangulo',
         descripcion: 'Acero de refuerzo con superficie corrugada...',
-        imagen: '../imagenes/rectangulo.jpeg',
+        imagen: 'img/rectangulo.jpeg',
         tabla: [
             ['3/8"', '0.560', '12.0', 'Disponible'],
             ['1/2"', '0.994', '12.0', 'Disponible'],
@@ -19,7 +19,7 @@
     },
     'placa-aleacion':{
         titulo: 'Plato',
-        imagen: '../imagenes/plate.jpeg',
+        imagen: 'img/plate.jpeg',
         tabla: [
             ['3/8"', '0.560', '12.0','Disponible'],
             ['1/2"', '0.994', '12.0','Disponible'],
